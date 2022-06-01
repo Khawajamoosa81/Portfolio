@@ -1,11 +1,23 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './Components/Navbar';
 
-export default function App() {
+const App = () => {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <>
+      <NavBar />
+      <Router>
+        <Routes>
+          <Route path="/" element="" />
+          <Route path="/project" element="" />
+          <Route path="/about" element="" />
+          <Route path="/resume" element="" />
+          <Route path="*" element="" />
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
+
+export default App;
